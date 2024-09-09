@@ -1,4 +1,5 @@
 // contains.c by Brandon Kmiec. Submitted for CSC 152 September 8, 2024
+// function to determine if a byte buffer is found in another byte buffer
 // Used the pseudo code from krovetz.net/152/w01/hw_prog.html as a starting point
 
 #include <stdio.h>
