@@ -1,0 +1,6 @@
+Practice hex to binary by writing the binary equivalent of each of the following 32-bit unsigned hexadecimal integers. Write out all 32 bits with leading 0s as needed. (You can include optional spaces in your answer if you like.)
+
+0x1 = 00000000000000000000000000000001
+0x1ff = 00000000000000000000000111111111
+0x800000 = 00000000100000000000000000000000
+0xa01 = 00000000000000001010000000010111

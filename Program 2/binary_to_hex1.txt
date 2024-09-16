@@ -1,0 +1,6 @@
+Practice binary to hex by writing the hexadecimal equivalent of each of the following 32-bit unsigned binary integers. Write your answer in the form 0x________.
+
+11111111 11111111 11111111 11111111 = 0xffffffff
+00000010 00000000 10000000 00000000 = 0x02008000
+00000000 00000000 00011111 11100000 = 0x00001fe0
+11111000 01111111 00000000 00000000 = 0xf87f0000

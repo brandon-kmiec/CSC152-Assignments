@@ -1,0 +1,3 @@
+Write a function named bits_to_flip that accepts as parameters two integers a and b and returns the number of bits that would need to be flipped from 0 to 1 or vice versa to turn a's binary representation into b's. For example, if the call is bits_to_flip(42, 108), the binary representation of 42 is 0101010 preceded by 25 zeros, and the binary representation of 108 is 1101100 preceded by 25 zeros. To convert the first into the second you would need to flip three bits. So your function should return 3.
+
+You should solve this problem using bitwise operators and arithmetic. Do not use any collections or strings to solve the problem. You may assume that an int occupies 32 bits in memory.

@@ -1,0 +1,8 @@
+There is no need to memorize the entire ASCII table, but knowing the placement of a few key characters from which you can then find neighbors is worthwhile. Use man ascii to learn the codes for the three characters '0', 'A', 'a', and use them to do the following conversions. Write your answer in the form 0x__.
+
+Used https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html to get ascii to decimal
+Used https://www.toppr.com/guides/maths/decimal-to-hex-conversion/#:~:text=Method%20for%20Decimal%20to%20Hexadecimal%20Number%20System%20Conversion%3A&text=Step%2D1%3A%20First%2C%20divide,the%20remainders%20in%20reverse%20order. for learning decimal to hex conversion
+
+hex for 'I' = 73_d = 73_d/16_d = 4_d r 9_d => 4_d/16_d = 0_d r 4_d => 0x49
+hex for '5' = 53_d = 53_d/16_d = 3_d r 5_d => 3_d/16_d = 0_d r 3_d => 0x35
+hex for 'd' = 100_d = 100_d/16_d = 6_d r 4_d => 6_d/16_d = 0_d r 6_d => 0x64

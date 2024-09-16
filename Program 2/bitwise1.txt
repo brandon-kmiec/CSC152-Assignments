@@ -1,0 +1,13 @@
+Test your understanding of bitwise ops by evaluating the following expressions and writing their results in binary. (We used char to keep things simple, but the bitwise operators have same behavior for int, just with more bits.)
+
+unsigned char this = 0xf0;
+unsigned char that = 0x55;
+
+this = 0xf0 = 11110000
+that = 0x55 = 01010101
+this & that = 11110000 & 01010101 = 01010000
+this | that = 11110000 | 01010101 = 11110101
+this ^ that = 11110000 ^ 01010101 = 10100101
+~this = ~11110000 = 00001111
+this >> 2 = 11110000 >> 2 = 00111100
+that << 1 = 01010101 << 1 = 10101010

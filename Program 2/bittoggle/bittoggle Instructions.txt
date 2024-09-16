@@ -1,0 +1,12 @@
+Bit masks are an important part of coding bitwise operations. Often you might need to set or clear a particular bit in a mask, and the following functions accomplish that:
+
+int bitset(int num, int pos)
+{
+    return num | (1 << pos);
+}
+​
+int bitclear(int num, int pos)
+{
+    return num & (~(1 << pos));
+}
+Write a function named bittoggle that accepts two int arguments num and pos, and toggles the bit at the pos'th position of num, returning the result. For example, the call of bittoggle(22, 5) should return 54.

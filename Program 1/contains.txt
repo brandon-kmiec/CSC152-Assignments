@@ -1,0 +1,59 @@
+=================================================================
+==4518==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x00016d34758a at pc 0x000102abb17c bp 0x00016d347480 sp 0x00016d347478
+READ of size 1 at 0x00016d34758a thread T0
+    #0 0x102abb178 in is_equal+0xac (a.out:arm64+0x100003178)
+    #1 0x102abb060 in contains+0xf4 (a.out:arm64+0x100003060)
+    #2 0x102abb664 in main+0x3f0 (a.out:arm64+0x100003664)
+    #3 0x188ec7150  (<unknown module>)
+
+
+Address 0x00016d34758a is located in stack of thread T0 at offset 42 in frame
+    #0 0x102abb280 in main+0xc (a.out:arm64+0x100003280)
+
+
+  This frame has 5 object(s):
+    [32, 42) 'buf' <== Memory access at offset 42 overflows this variable
+    [64, 67) 'a'
+    [80, 83) 'b'
+    [96, 100) 'c'
+    [112, 116) 'd'
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism, swapcontext or vfork
+      (longjmp and C++ exceptions *are* supported)
+SUMMARY: AddressSanitizer: stack-buffer-overflow (a.out:arm64+0x100003178) in is_equal+0xac
+Shadow bytes around the buggy address:
+  0x00016d347300: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x00016d347380: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x00016d347400: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x00016d347480: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x00016d347500: 00 00 00 00 00 00 00 00 00 00 00 00 f1 f1 f1 f1
+=>0x00016d347580: 00[02]f2 f2 03 f2 03 f2 04 f2 04 f3 00 00 00 00
+  0x00016d347600: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x00016d347680: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x00016d347700: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x00016d347780: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x00016d347800: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==4518==ABORTING
+At front match: yes (+1)
+At back match: yes (+1)
+Empty b: yes (+0.5)
+Empty a: yes (+0.5)
+Mismatch but prefixes match: yes (+1)
