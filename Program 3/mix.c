@@ -19,7 +19,6 @@ void mix(uint32_t *ap, uint32_t *bp, uint32_t *cp, uint32_t *dp) {
     uint32_t d = *dp;
 
     // Mix the four words
-    // YOUR CODE HERE
     a = (a + b) % 0x100000000;
     d = d ^ a;
     d = rotl32(d, 16);

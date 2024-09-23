@@ -21,7 +21,6 @@ void mix(uint32_t *ap, uint32_t *bp, uint32_t *cp, uint32_t *dp) {
     uint32_t d = *dp;
 
     // Mix the four words
-    // YOUR CODE HERE
     a = (a + b) % 0x100000000;
     d = d ^ a;
     d = rotl32(d, 16);
@@ -44,7 +43,25 @@ void mix(uint32_t *ap, uint32_t *bp, uint32_t *cp, uint32_t *dp) {
 
 // Step 2
 void p152(void *in, void *out) {
+    // copy 64 bytes into an auto-allocated array of 16 uint32_t
+    uint32_t *arr = in;
     
+    // loop 10 times through mix function calls
+    for(int i = 0; i < 10; i++) {
+        // mix columns
+        mix(&arr[0], &arr[4], &arr[8], &arr[12]);
+        mix(&arr[1], &arr[5], &arr[9], &arr[13]);
+        mix(&arr[2], &arr[6], &arr[10], &arr[14]);
+        mix(&arr[3], &arr[7], &arr[11], &arr[15]);
+        // mix diagonals
+        mix(&arr[0], &arr[5], &arr[10], &arr[15]);
+        mix(&arr[1], &arr[6], &arr[11], &arr[12]);
+        mix(&arr[2], &arr[7], &arr[8], &arr[13]);
+        mix(&arr[3], &arr[4], &arr[9], &arr[14]);
+    } // end for
+
+    // copy 64 bytes into out
+    out = (void *)arr;
 } // end p152
 
 
@@ -54,6 +71,7 @@ void p152(void *in, void *out) {
 
 int main() {
     // Step 1
+    printf("\nStep 1:\n");
     uint32_t a = 0x00010203;
     uint32_t b = 0x04050607;
     uint32_t c = 0x08090A0B;
@@ -62,8 +80,8 @@ int main() {
     printf("Is       : %x %x %x %x\n", a, b, c, d);
     printf("Should be: b54718aa afd1b4f0 501eb3c9 4210a1b3\n");
 
-
     // Step 2
+    printf("\nStep 2:\n");
     unsigned char buf[64] = {1}; // Puts 1 in first byte, rest get auto zeroed
     p152(buf, buf);
     // As a test, output the first 16 bytes of the output
@@ -72,6 +90,8 @@ int main() {
         printf("%02x", buf[i]);
     printf("\n");
     printf("Should be: 14627e9771052d97a8a025cc5531572f\n");
+    
+    printf("\n");
 } // end main
 
 #endif
