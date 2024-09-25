@@ -1,4 +1,5 @@
 // mix.c by Brandon Kmiec. Submitted for CSC 152 September 24, 2024.
+// Implement the permutation described in the video "A cryptographic permutation"
 
 #include <stdint.h>
 
@@ -40,7 +41,7 @@ void mix(uint32_t *ap, uint32_t *bp, uint32_t *cp, uint32_t *dp) {
 } // end mix
 
 
-#if 1   // Set to 1 while testing and 0 for submission
+#if 0   // Set to 1 while testing and 0 for submission
 
 #include <stdio.h>
 
