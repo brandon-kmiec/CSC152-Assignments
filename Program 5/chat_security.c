@@ -1,4 +1,5 @@
 // chat_security.c by Brandon Kmiec. Submitted for CSC 152 October 6, 2024
+// Implements AES-CTR encryption using openssl
 // Followed "EVP Symmetric Encryption and Decryption" example from wiki.openssl.org/index.php/EVP_Symmetric_Encryption_and_Decryption
 
 #include <openssl/evp.h>
