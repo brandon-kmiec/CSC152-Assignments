@@ -1,0 +1,5 @@
+Compile using:
+
+gcc -o mix mix.c -Wall -Werror -fsanitize=address
+gcc -o p152 p152.c -Wall -Werror -fsanitize=address
+gcc -o p152stream p152stream.c -Wall -Werror -fsanitize=address

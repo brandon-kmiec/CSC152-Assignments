@@ -1,0 +1,3 @@
+Compile using:
+
+gcc -o contains contains.c -Wall -Werror -fsanitize=address

@@ -1,0 +1,3 @@
+Compile using: 
+
+gcc -o chat_security chat_security.c -Wall -Werror -fsanitize=address -lcrypto
