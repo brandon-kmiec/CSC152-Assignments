@@ -1,0 +1,2 @@
+Student encrypt/decrypt: 3
+Student encrypt/prof decrypt: 2
