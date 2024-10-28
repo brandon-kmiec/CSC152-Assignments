@@ -1,1 +1,3 @@
+Compile using:
+
 gcc -o miner miner.c -Wall -Werror -fsanitize=address -lcrypto
