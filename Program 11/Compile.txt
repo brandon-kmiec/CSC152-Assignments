@@ -1,0 +1,4 @@
+Compile using:
+
+javac sign.java
+javac verify.java

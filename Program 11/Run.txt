@@ -1,0 +1,4 @@
+Run using:
+
+java sign <p> <g> <g^d> <d> <x>
+java verify <p> <g> <g^d> <x> <r> <s>
