@@ -2,3 +2,17 @@ Run using:
 
 java sign <p> <g> <g^d> <d> <x>
 java verify <p> <g> <g^d> <x> <r> <s>
+
+
+Sample outputs:
+java sign 101 2 14 10 5
+    r = 8
+    s = 75
+java verify 101 2 14 5 8 75
+    1
+java verify 101 2 14 5 8 74
+    0
+java verify 101 2 14 5 7 74
+    0
+java verify 101 2 14 5 7 75
+    0
