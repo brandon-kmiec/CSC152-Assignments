@@ -1,0 +1,9 @@
+I've graded Program 11. You got 5/5 if your sign and verify worked for the following test case
+
+sign 618970019642690137449562111 3 407364168243282573235660143 123456 1000
+
+If it did not, you still got 2.5/5 if your sign and verify worked for the test case from the assignment writeup.
+
+sign 101 2 14 10 5
+
+The number one cause for loss of points appeared to be lack of testing on large numbers. Some miscellaneous points were deducted in a few cases for not following the spec.

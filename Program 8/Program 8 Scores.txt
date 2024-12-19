@@ -1,0 +1,1 @@
+Program 8 scores have been posted. I did one simple test. I ran "miner 16" and then hashed your program output myself to verify that the hash indeed had 16 bits of zero at the start. You either got 0 or 5 based on this test.
